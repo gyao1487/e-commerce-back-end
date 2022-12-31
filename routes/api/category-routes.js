@@ -38,41 +38,28 @@ router.post("/", async (req, res) => {
 });
 
 //UPDATE CATEGORY BY ID
-router.put("/:id", async (req, res, next) => {
+router.put("/:id", async (req, res) => {
   try {
-    //Checking if category exists
-    let category = await Category.findById(req.params.id);
-    if (!category) {
-      return res.json({
-        success: false,
-        message: "Category id does not exist",
-      });
-    } else {
-      let updateCategory = await Category.findbyIdAndUpdate(
-        req.params.id,
-        req.body,
-        {
-          new: true,
-          runValidator: true,
-        }
-      );
-
-      res.json({
-        success: false,
-        message: "Category updated successfully.",
-        category: updateCategory,
-      });
+    updatedCategory = await Category.update(
+      {
+        category_name: req.body.category_name,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    if (!updatedCategory) {
+      res.status(404).json({ message: "No category was found with this id!" });
+      return;
     }
-  } catch (error) {
-    next(error);
+
+    res.status(200).json(updatedCategory);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
-
-// Category.findByIdAndUpdate(req.params.id, req.body)
-// .then(category => res.json({ msg: 'Updated successfully' }))
-// .catch(err =>
-//  res.status(400).json({ error: 'Unable to update the category' })
-// );
 
 //DELETE CATEGORY BY ID
 router.delete("/:id", async (req, res) => {
