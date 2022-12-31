@@ -42,7 +42,6 @@ Product.init(
         unique: false
       }
     }
-    // define columns
   },
   {
     sequelize,
