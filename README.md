@@ -9,7 +9,7 @@
 </p>
    
 ## Description
-Backend for e-commerce site built utilizing MySQL2, Express, Sequelize, and dotenv. Keeps track of products and inventory, with useful categories and tags to organize them. It containes API routes that point to the standard CRUD operations for the datatypes in the database (categories, products, tags). These routes have the following functionality:
+Backend for e-commerce site built utilizing MySQL2, Express, Sequelize, and dotenv. Keeps track of products and inventory, with useful categories and tags to organize them. It contains API routes that point to the standard CRUD operations for the datatypes in the database (categories, products, tags). These routes have the following functionality:
 
 * View existing categories, products, tags
 * Search individual categories, products, and tags
