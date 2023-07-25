@@ -1,4 +1,5 @@
 # E-Commerce Back End 
+Utilizing my E-commerce Back End, you can experience seamless product and inventory management with this powerful Node.js application. Built using MySQL2, Express, Sequelize, and dotenv, this backend system efficiently organizes products with customizable categories and tags, making it easy to keep track of your inventory. With API routes handling standard CRUD operations for categories, products, and tags, you can effortlessly manage your e-commerce data. Get ready to take your online store to the next level!
 
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
