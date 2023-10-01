@@ -65,7 +65,7 @@ Now that the application is set up, you can complete the next steps to start usi
 Please refer to the license in the repo
 
 ## Credits
-* Built by Grace Yao utilizing sample code provided by 2022 Trilogy Education Services, LLC
+* Built by Grace Yao
 
 ---
 ## Questions
